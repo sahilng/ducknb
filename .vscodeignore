@@ -12,3 +12,11 @@ vsc-extension-quickstart.md
 **/*.map
 **/*.ts
 **/.vscode-test.*
+
+# But explicitly include the DuckDB modules
+!**/node_modules/@duckdb/node-api/**
+!**/node_modules/@duckdb/node-bindings-darwin-arm64/**
+!**/node_modules/@duckdb/node-bindings-darwin-x64/**
+!**/node_modules/@duckdb/node-bindings-linux-arm64/**
+!**/node_modules/@duckdb/node-bindings-linux-x64/**
+!**/node_modules/@duckdb/node-bindings-win32-x64/**

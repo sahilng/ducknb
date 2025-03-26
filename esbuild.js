@@ -1,3 +1,4 @@
+// esbuild.js
 const esbuild = require('esbuild');
 
 esbuild.build({
@@ -5,6 +6,7 @@ esbuild.build({
   bundle: true,
   outfile: 'dist/extension.js',
   platform: 'node',
+  // Keep these external
   external: [
     'vscode',
     '@duckdb/node-bindings-linux-x64',
