@@ -130,11 +130,11 @@ export async function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(
     vscode.commands.registerCommand('duckdb-sql-notebooks.newNotebook', async () => {
-      // Create an untitled URI with the .dsqlnb extension
-      const untitledUri = vscode.Uri.parse('untitled:Untitled.dsqlnb');
+      // Create an untitled URI with the .ducknb extension
+      const untitledUri = vscode.Uri.parse('untitled:Untitled.ducknb');
   
       // Open the untitled notebook document.
-      // Since the file extension is .dsqlnb and you've contributed a notebook type for it,
+      // Since the file extension is .ducknb and you've contributed a notebook type for it,
       // VS Code will use your serializer/controller to open it.
       const notebookDoc = await vscode.workspace.openNotebookDocument(untitledUri);
       

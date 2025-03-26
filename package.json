@@ -23,7 +23,7 @@
         "displayName": "DuckDB SQL Notebook",
         "selector": [
           {
-            "filenamePattern": "*.dsqlnb"
+            "filenamePattern": "*.ducknb"
           }
         ]
       }
