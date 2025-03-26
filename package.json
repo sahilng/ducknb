@@ -14,11 +14,11 @@
   "contributes": {
     "notebooks": [
       {
-        "type": "sql-notebook",
-        "displayName": "SQL Notebook",
+        "type": "dsql-notebook",
+        "displayName": "DuckDB SQL Notebook",
         "selector": [
           {
-            "filenamePattern": "*.sqlnb"
+            "filenamePattern": "*.dsqlnb"
           }
         ]
       }

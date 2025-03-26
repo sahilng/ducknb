@@ -7,11 +7,11 @@ const duckdbInstances = new WeakMap<vscode.NotebookDocument, { instance: any, co
 
 export async function activate(context: vscode.ExtensionContext) {
   // Register the notebook serializer
-  vscode.workspace.registerNotebookSerializer('sql-notebook', new SqlNotebookSerializer());
+  vscode.workspace.registerNotebookSerializer('dsql-notebook', new SqlNotebookSerializer());
 
   // Create a DuckDB instance per notebook when it opens
   vscode.workspace.onDidOpenNotebookDocument(async (notebook) => {
-    if (notebook.notebookType === 'sql-notebook') {
+    if (notebook.notebookType === 'dsql-notebook') {
       const instance = await DuckDBInstance.create(':memory:');
       const connection = await instance.connect();
       duckdbInstances.set(notebook, { instance, connection });
@@ -20,7 +20,7 @@ export async function activate(context: vscode.ExtensionContext) {
 
   // Clean up the DuckDB instance when the notebook is closed
   vscode.workspace.onDidCloseNotebookDocument(async (notebook) => {
-    if (notebook.notebookType === 'sql-notebook') {
+    if (notebook.notebookType === 'dsql-notebook') {
       const duckdb = duckdbInstances.get(notebook);
       if (duckdb) {
         try {
@@ -37,9 +37,9 @@ export async function activate(context: vscode.ExtensionContext) {
 
   // Create your notebook controller
   const controller = vscode.notebooks.createNotebookController(
-    'sql-notebook-controller', // controller id
-    'sql-notebook',            // notebook type (must match package.json contribution)
-    'SQL Notebook Controller'
+    'dsql-notebook-controller', // controller id
+    'dsql-notebook',            // notebook type (must match package.json contribution)
+    'DuckDB SQL Notebook Controller'
   );
   controller.supportedLanguages = ['sql'];
 
