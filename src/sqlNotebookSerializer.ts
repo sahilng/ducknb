@@ -9,6 +9,16 @@ export class SqlNotebookSerializer implements vscode.NotebookSerializer {
     // Convert file bytes to string
     const fileStr = new TextDecoder().decode(content);
 
+    // NEW: If the file is empty, return a default notebook with one blank cell
+    if (fileStr.trim().length === 0) {
+      const defaultCell = new vscode.NotebookCellData(
+        vscode.NotebookCellKind.Code,
+        "",       // blank cell text
+        "sql"     // language id
+      );
+      return new vscode.NotebookData([defaultCell]);
+    }
+
     // Attempt to parse JSON (or handle empty file gracefully)
     let data: any;
     try {
