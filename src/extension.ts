@@ -129,7 +129,7 @@ export async function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(controller);
 
   context.subscriptions.push(
-    vscode.commands.registerCommand('duckdb-sql-notebooks.newNotebook', async () => {
+    vscode.commands.registerCommand('ducknb.newNotebook', async () => {
       // Create an untitled URI with the .ducknb extension
       const untitledUri = vscode.Uri.parse('untitled:Untitled.ducknb');
   

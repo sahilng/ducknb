@@ -1,6 +1,6 @@
 {
-  "name": "duckdb-sql-notebooks",
-  "displayName": "duckdb-sql-notebooks",
+  "name": "ducknb",
+  "displayName": "ducknb",
   "description": "DuckDB SQL Notebooks",
   "version": "0.0.1",
   "engines": {
@@ -13,7 +13,7 @@
   "contributes": {
     "commands": [
       {
-        "command": "duckdb-sql-notebooks.newNotebook",
+        "command": "ducknb.newNotebook",
         "title": "New DuckDB SQL Notebook"
       }
     ],

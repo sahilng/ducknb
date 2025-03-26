@@ -1,6 +1,6 @@
-# duckdb-sql-notebooks README
+# ducknb README
 
-This is the README for your extension "duckdb-sql-notebooks". After writing up a brief description, we recommend including the following sections.
+This is the README for your extension "ducknb". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 
