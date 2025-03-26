@@ -1,7 +1,12 @@
 {
   "name": "ducknb",
   "displayName": "ducknb",
+  "publisher": "sahilng",
   "description": "DuckDB SQL Notebooks",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sahilng/ducknb.git"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.98.0"
