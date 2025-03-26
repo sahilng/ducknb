@@ -9,9 +9,14 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "duckdb-sql-notebooks.newNotebook",
+        "title": "New DuckDB SQL Notebook"
+      }
+    ],
     "notebooks": [
       {
         "type": "dsql-notebook",
@@ -24,6 +29,7 @@
       }
     ]
   },
+  "activationEvents": [],
   "scripts": {
     "vscode:prepublish": "npm run package",
     "compile": "npm run check-types && npm run lint && node esbuild.js",
