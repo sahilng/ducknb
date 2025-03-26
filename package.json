@@ -3,6 +3,7 @@
   "displayName": "ducknb",
   "publisher": "sahilng",
   "description": "DuckDB SQL Notebooks",
+  "icon": "ICON.png",
   "repository": {
     "type": "git",
     "url": "git://github.com/sahilng/ducknb.git"
