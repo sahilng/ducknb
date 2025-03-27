@@ -1,6 +1,6 @@
 # <img src='ICON.png' height=25px> ducknb
 
-VSCode Extension for Macs that enables DuckDB SQL Notebooks
+VSCode Extension for Apple Silicon Macs that enables DuckDB SQL Notebooks
 
 # Installation
 
