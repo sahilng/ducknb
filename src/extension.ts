@@ -24,7 +24,7 @@ export async function activate(context: vscode.ExtensionContext) {
       const duckdb = duckdbInstances.get(notebook);
       if (duckdb) {
         try {
-          await duckdb.connection.close();
+          await duckdb.connection.closeSync();
           // If DuckDBInstance has a close method, call it as well:
           // await duckdb.instance.close();
         } catch (err) {
