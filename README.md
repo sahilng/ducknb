@@ -9,7 +9,7 @@ VSCode Extension for Apple Silicon Macs that enables DuckDB SQL Notebooks
 
 #  Usage
 
-Create/open a `.ducknb` file or use the `New DuckDB SQL Notebook` command.
+Create/open a `.ducknb` file or use the `ducknb: New DuckDB SQL Notebook` command.
 
 # Example
 

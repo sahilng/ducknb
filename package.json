@@ -25,7 +25,7 @@
     "commands": [
       {
         "command": "ducknb.newNotebook",
-        "title": "New DuckDB SQL Notebook"
+        "title": "ducknb: New DuckDB SQL Notebook"
       }
     ],
     "notebooks": [
