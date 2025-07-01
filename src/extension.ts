@@ -12,7 +12,9 @@ export async function activate(context: vscode.ExtensionContext) {
   // Create a DuckDB instance per notebook when it opens
   vscode.workspace.onDidOpenNotebookDocument(async (notebook) => {
     if (notebook.notebookType === 'duckdb-sql-notebook') {
-      const instance = await DuckDBInstance.create(':memory:');
+      const instance = await DuckDBInstance.create(':memory:', {
+        enable_external_access: 'true'
+      });
       const connection = await instance.connect();
       duckdbInstances.set(notebook, { instance, connection });
     }
